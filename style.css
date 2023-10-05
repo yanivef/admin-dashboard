@@ -14,12 +14,90 @@
 
 .left {
     background-color: #6366f1;
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-    gap: 16px;
 }
 
 .right {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.nav {
+    display: flex;
+}
+.inp {
+    width: 600px;
+    border-radius: 16px;
+    outline: none;
+    font-size: 1rem;
+    padding: 4px;
+    background-color: #e5e7eb;
+}
+
+.nav:nth-child(1) {
+    margin-left: 32px;
+}
+.search-bar {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile {
+    display: flex;
+    justify-content: end;
+    margin-right: 32px;
+    gap: 32px;
+    width: 100%;
+    align-items: center;
+
+}
+
+.profile p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 6fr;
+    grid-auto-flow: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.content img {
+    grid-row: span 3;
+    justify-self: end;
+    align-self: baseline;
+    max-height: 100px;
+    max-width: 500px;
+}
+
+.content button{
+    background-color: #6366f1;
+    border-radius: 16px;
+    width: 150px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.content-btns {
+    display: flex;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    gap: 16px;
+    justify-content: center;
+}
+
+
+.card-container {
+    background-color: #e5e7eb;
 }
 
 button {
@@ -41,8 +119,16 @@ button:active {
     box-shadow: 3px 2px 22px 1px rgba(255, 255, 255, 0.6); 
 }
 
+.content-btns button:hover{
+    box-shadow: 1px 1px 22px 1px rgba(0, 0, 0, 0.2); 
+
+}
+.content-btns button:active{
+    transform: translateY(4px);
+}
+
 .icons-container {
-    height: 70%;
+    height: 80%;
     display: grid;
     align-items: center;
     grid-template-rows: repeat(17, minmax(50px, 1fr));
